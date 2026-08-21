@@ -21,10 +21,8 @@ export function Modal({ open, onClose, title, icon, children, className, footer 
       if (e.key === 'Escape') onClose()
     }
     window.addEventListener('keydown', handler)
-    document.body.style.overflow = 'hidden'
     return () => {
       window.removeEventListener('keydown', handler)
-      document.body.style.overflow = ''
     }
   }, [open, onClose])
 
